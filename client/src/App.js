@@ -8,6 +8,7 @@ import DetailView from './Components/ItemDetails/DetailView';
 import TemplateProvider from './templates/TemplateProvider';
 import ContextProvider from './context/ContextProvider';
 import Cart from './Components/Cart/Cart';
+import MusicHome from './Components/music app/MusicHome'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
               <Route path= '/' element={<Home />} />
               <Route path= '/cart' element={<Cart />} />
               <Route path= '/product/:id' element={<DetailView />} />
+              <Route path='/music' element={<MusicHome/>}/>
             </Routes>
           </Box>
         </BrowserRouter>

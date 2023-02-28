@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 import { AppBar, Toolbar, Box, Typography, IconButton, Drawer, List, styled } from '@mui/material';
 import { Menu } from '@mui/icons-material';
+import LibraryMusicSharpIcon from '@mui/icons-material/LibraryMusicSharp';
 
 import { Link } from 'react-router-dom';
 
@@ -25,6 +26,11 @@ const SubHeading = styled(Typography)`
     font-size: 10px;
     font-style: italic;
 `
+
+const TextMusic= styled(Typography)`
+    color:black;
+
+    `
 
 const PlusImage = styled('img')({
     width: 10,
@@ -74,6 +80,10 @@ const Header = () => {
     return (
         <StyledHeader position="fixed">
             <Toolbar style={{ minHeight: 55 }}>
+            <TextMusic>
+
+<Link to={`/music`}><LibraryMusicSharpIcon/></Link>
+    </TextMusic>
                 <MenuButton
                     color="inherit"
                     onClick={handleOpen}
